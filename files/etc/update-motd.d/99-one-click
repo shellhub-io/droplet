@@ -1,0 +1,24 @@
+#!/bin/sh
+#
+# Configured as part of the DigitalOcean 1-Click Image build process
+
+myip=$(hostname -I | awk '{print$1}')
+cat <<EOF
+********************************************************************************
+
+Welcome to ShellHub Self-Hosted DigitalOcean Droplet.
+To keep this Droplet secure, the UFW firewall is enabled.
+All ports are BLOCKED except 22 (SHELLHUB), 2222 (OpenSSH),
+80 (HTTP), and 443 (HTTPS).
+
+In a web browser, you can view:
+  * Your ShellHub Self-Hosted instance: http://$myip
+
+On the server:
+  * The ShellHub working directory is located at /var/www/shellhub
+
+For help and more information, visit https://docs.shellhub.io
+
+********************************************************************************
+To delete this message of the day: rm -rf $(readlink -f ${0})
+EOF

@@ -1,0 +1,15 @@
+[Unit]
+Description=ShellHub
+Requires=docker.service
+After=docker.service
+
+[Service]
+Type=oneshot
+RemainAfterExit=true
+WorkingDirectory=/var/www/shellhub
+ExecStart=/usr/bin/make start
+ExecStop=/usr/bin/make stop
+User=root
+
+[Install]
+WantedBy=multi-user.target
