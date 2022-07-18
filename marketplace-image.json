@@ -4,7 +4,7 @@
     "image_name": "shellhub-20-04-snapshot-{{timestamp}}",
     "apt_packages": "docker.io docker-compose make",
     "application_name": "ShellHub",
-    "application_version": ""
+    "application_version": "{{env `SHELLHUB_VERSION`}}"
   },
   "sensitive-variables": ["do_token"],
   "builders": [

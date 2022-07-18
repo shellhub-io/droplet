@@ -10,6 +10,6 @@ mkdir -p /var/www
 cd /var/www
 
 # Download and configure ShellHub Self-Hosted server
-git clone -b v0.9.4 https://github.com/shellhub-io/shellhub.git shellhub
+git clone -b $application_version https://github.com/shellhub-io/shellhub.git shellhub
 cd shellhub
 make keygen
