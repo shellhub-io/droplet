@@ -1,7 +1,7 @@
 {
   "variables": {
     "do_token": "{{env `DIGITALOCEAN_TOKEN`}}",
-    "image_name": "shellhub-20-04-snapshot-{{timestamp}}",
+    "image_name": "shellhub-22-04-snapshot-{{timestamp}}",
     "apt_packages": "docker.io docker-compose make",
     "application_name": "ShellHub",
     "application_version": "{{env `SHELLHUB_VERSION`}}"
@@ -11,7 +11,7 @@
     {
       "type": "digitalocean",
       "api_token": "{{user `do_token`}}",
-      "image": "ubuntu-20-04-x64",
+      "image": "ubuntu-22-04-x64",
       "region": "nyc3",
       "size": "s-1vcpu-1gb",
       "ssh_username": "root",
